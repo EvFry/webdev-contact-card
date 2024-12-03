@@ -1,0 +1,112 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Main Contact Card Container */
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 3px solid #0077cc; 
+    width: 90%;
+    max-width: 1200px;
+    padding: 30px;
+    gap: 20px;
+}
+
+/* Profile Picture Styling */
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0077cc; 
+}
+
+/* Individual Sections (PODs) */
+.pod {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 3px solid #0077cc; 
+    border-radius: 15px;
+    text-align: center;
+ }
+
+.contact-details,
+.company-details {
+    margin-top: 10px;
+}
+
+/* Text Styling */
+h2 {
+    font-size: 1.4rem;
+    color: #00529b; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 500px) {
+    .contact-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pod {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .profile-pic {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-pic img {
+        width: auto;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .contact-details,
+    .company-details {
+        flex: 1;
+        max-width: none;
+        text-align: left;
+    }
+
+    .pod {
+        margin: 0;
+    }
+}
